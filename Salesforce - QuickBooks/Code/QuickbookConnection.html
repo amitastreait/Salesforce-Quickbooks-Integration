@@ -1,0 +1,23 @@
+<apex:page controller="QuickbookConnection">
+  <apex:slds />
+  <apex:form id="theForm" >
+      <apex:pageblock >
+          <apex:pageMessages ></apex:pageMessages>
+          <apex:actionstatus id="statusAuthQuickBooks">
+        <apex:facet name="start">
+            <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb; height:100%;opacity:0.65;width:100%;">
+                <div class="waitingHolder" style="top: 100px; width: 91px;">
+                    <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+                    <span class="waitingDescription">Loading...</span>
+                </div>
+            </div>
+        </apex:facet>
+    </apex:actionstatus>
+          <apex:pageBlockButtons location="top">
+              <apex:commandButton action="{!doAuthorizationQuickBooks}" value="Authorize with Quickbooks"  />
+              <apex:commandButton action="{!doFetchAccessToken}" value="Complete Authorzation" status="statusAuthQuickBooks"
+                  reRender="theForm" />
+          </apex:pageBlockButtons>
+      </apex:pageblock>
+  </apex:form>
+</apex:page>
