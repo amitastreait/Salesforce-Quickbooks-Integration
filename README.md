@@ -7,23 +7,23 @@ Hi All, Hope you all enjoyed my previous Integration related posts. I have come 
 
 Earlier Quickbooks uses oAuth 1.0 for the authentication but now it has updated it's API and using oAuth 2.0 so in this Integration we are going to use oAuth 2.0
 
-Step1 - Create a Custom Object OR Custom Metadata to store the information about Access and Refresh Token. If you are thinking about to use Custom Setting the answer is No because Access Token length is more than 255 Character and in Custom Setting we can store data upto 255 Character.
+**Step1 -** Create a Custom Object OR Custom Metadata to store the information about Access and Refresh Token. If you are thinking about to use Custom Setting the answer is No because Access Token length is more than 255 Character and in Custom Setting we can store data upto 255 Character.
 
-Setup -> Create -> Objects -> New -> Your Object will look like below image
+**Setup -> Create -> Objects -> New -> **Your Object will look like below image
 
 ![QuickBooks Infos Object](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/QuickBooks%20Infos%20Object.png)
 
-Step2 - Create a Trail Account of QuickBooks From [Here](https://developer.intuit.com/docs/00_quickbooks_online/1_get_started/10_create_an_intuit_developer_account).
+**Step2 -** Create a Trail Account of QuickBooks From [Here](https://developer.intuit.com/docs/00_quickbooks_online/1_get_started/10_create_an_intuit_developer_account).
 
-Step3 - Create a connected App into QuickBooks Developer account, Follow the steps given into this Link. Please enter a redirect URI. for example if you want to redirect into "QuickbookConnection" VF page and your org base URL is "https://dreamhouse-a-dev-ed.my.salesforce.com" then your Redirect URI will be as given below
+**Step3 -** Create a connected App into QuickBooks Developer account, Follow the steps given into this Link. Please enter a redirect URI. for example if you want to redirect into **"QuickbookConnection"** VF page and your org base URL is **"https://dreamhouse-a-dev-ed.my.salesforce.com" ** then your Redirect URI will be as given below
 
 https://dreamhouse-a-dev-ed--c.ap5.visual.force.com/apex/QuickbookConnection
 
-Step4 - Now, in this Step get the Consumer Secret and Consumer Key and to get the key follow the steps given in This [Link](https://developer.intuit.com/docs/00_quickbooks_online/1_get_started/40_get_development_keys).
+**Step4 -** Now, in this Step **get the Consumer Secret and Consumer Key** and to get the key follow the steps given in This [Link](https://developer.intuit.com/docs/00_quickbooks_online/1_get_started/40_get_development_keys).
 
 ![Connected App](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/Connected%20App.png)
 
-Step5 - Now, Create a Apex Class. File -> New -> Apex Class -> Name it "QuickbookConnection" -> OK. Use below code the class
+**Step5 -** Now, Create a Apex Class. **File -> New -> Apex Class -> Name it "QuickbookConnection" -> OK**. Use below code the class
 
 ```
 public class QuickbookConnection{
@@ -174,7 +174,7 @@ public class QuickbookConnection{
 
 
 
-Step5 - Create a VF page. File -> New -> Visualforce Page -> Name "QuickbookConnection" -> OK. and use below code for this page
+**Step5 -** Create a VF page. **File -> New -> Visualforce Page -> Name "QuickbookConnection" -> OK**. and use below code for this page
 
 ```
 
@@ -204,14 +204,14 @@ reRender="theForm" />
 
 ```
 
-tada we have done with the coding and configuration part, now time to test the functionality. Click preview on the VF page. Click on Authorize with QuickBooks it will take you to login page of QuickBooks login with your username and password.
+tada we have done with the coding and configuration part, now time to test the functionality. Click preview on the VF page. Click on **Authorize with QuickBooks** it will take you to login page of QuickBooks **login with your username and password**.
 
 If you have more than 1 Sandbox it will list all the sandbox over there select one which you want to integrate.
 
-Authorize the Application and you will be redirected to the same page now click on Complete Authorization it will create a record for the custom Object that you have created with success message
+Authorize the Application and you will be redirected to the same page now **click on Complete Authorization** it will create a record for the custom Object that you have created with success message
 
 ![Setp1](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/Page%201.png)
-[!Step2](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/Page%202.png)
+![Step2](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/Page%202.png)
 ![Setp3](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/Page%203.png)
 ![Step4](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/Page%204.png)
 ![FinalOutPut](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/Page%205.png)
@@ -226,9 +226,11 @@ If you have any problem then please come up into comment section.
 
 Happy Learning :100: :joy:
 
-Resources - 
-[Create Quickbooks App](https://developer.intuit.com/docs/00_quickbooks_online/1_get_started/30_create_an_app)
-[QuickBooks oAuth2.0 Steps](https://developer.intuit.com/docs/00_quickbooks_online/1_get_started/00_get_started)
+**Resources -** 
+
+> [Create Quickbooks App](https://developer.intuit.com/docs/00_quickbooks_online/1_get_started/30_create_an_app)
+
+> [QuickBooks oAuth2.0 Steps](https://developer.intuit.com/docs/00_quickbooks_online/1_get_started/00_get_started)
     
 
 
