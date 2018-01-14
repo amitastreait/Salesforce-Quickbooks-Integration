@@ -9,7 +9,7 @@ Earlier Quickbooks uses oAuth 1.0 for the authentication but now it has updated 
 
 **Step1 -** Create a Custom Object OR Custom Metadata to store the information about Access and Refresh Token. If you are thinking about to use Custom Setting the answer is No because Access Token length is more than 255 Character and in Custom Setting we can store data upto 255 Character.
 
-**Setup -> Create -> Objects -> New -> **Your Object will look like below image
+**Setup -> Create -> Objects -> New ->** Your Object will look like below image
 
 ![QuickBooks Infos Object](https://github.com/amitastreait/Salesforce-Quickbooks-Integration/blob/master/Salesforce%20-%20QuickBooks/Images/QuickBooks%20Infos%20Object.png)
 
